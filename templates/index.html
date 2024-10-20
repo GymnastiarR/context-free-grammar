@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemeriksa Kata CFG</title>
+    <link rel="stylesheet" href="./../static/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pemeriksa Kata CFG</h1>
+        <form action="/" method="get">
+            <input type="text" id="word" name="word" placeholder="Masukkan kata di sini">
+            <button id="checkButton">Periksa</button>
+        </form>
+        {% if word != None %}
+        <p id="result">Kata <strong>"{{ word }}"</strong> {% if isAccepted %} diterima oleh aturan {% else %} tidak
+            diterima oleh aturan
+            {% endif %}
+        </p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
